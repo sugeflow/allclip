@@ -1,0 +1,29 @@
+[
+  {"kind":"Listing","data":{"children":[{"kind":"t3","data":{
+    "id":"1abc234","name":"t3_1abc234","title":"How I organize my Obsidian vault after 3 years",
+    "selftext":"After a lot of trial and error, here is my setup:\n\n1. **Inbox** for everything new\n2. *Areas* for ongoing stuff\n\n![img](x9y8z7)\n\nMore details: https://example.com/post\n\nhttps://preview.redd.it/abc123def.png?width=1080&format=png&auto=webp&s=deadbeef",
+    "author":"vault_keeper","subreddit":"ObsidianMD","subreddit_name_prefixed":"r/ObsidianMD","link_flair_text":"Showcase",
+    "created_utc":1759000000,"score":1523,"upvote_ratio":0.97,"num_comments":214,
+    "permalink":"/r/ObsidianMD/comments/1abc234/how_i_organize_my_obsidian_vault_after_3_years/",
+    "url":"https://www.reddit.com/r/ObsidianMD/comments/1abc234/how_i_organize_my_obsidian_vault_after_3_years/",
+    "is_self":true,"domain":"self.ObsidianMD","over_18":false,
+    "media_metadata":{"x9y8z7":{"status":"valid","e":"Image","m":"image/png","s":{"x":1200,"y":800,"u":"https://preview.redd.it/x9y8z7.png?width=1200&format=png&auto=webp&s=abc"}}}
+  }}]}},
+  {"kind":"Listing","data":{"children":[
+    {"kind":"t1","data":{"author":"modbot","body":"Please read the rules.","score":1,"stickied":true,"created_utc":1759000100}},
+    {"kind":"t1","data":{"author":"AutoModerator","body":"Auto message","score":1,"created_utc":1759000101}},
+    {"kind":"t1","data":{"author":"alice","body":"Great setup!\nThanks for sharing.","score":300,"created_utc":1759000200,"replies":{"kind":"Listing","data":{"children":[
+      {"kind":"t1","data":{"author":"vault_keeper","body":"Glad it helps","score":120,"created_utc":1759000300,"replies":{"kind":"Listing","data":{"children":[
+        {"kind":"t1","data":{"author":"alice","body":"One more question","score":20,"created_utc":1759000400,"replies":{"kind":"Listing","data":{"children":[
+          {"kind":"t1","data":{"author":"vault_keeper","body":"Too deep","score":5,"created_utc":1759000500,"replies":""}}
+        ]}}}}
+      ]}}}},
+      {"kind":"t1","data":{"author":"bob","body":"+1","score":3,"created_utc":1759000310,"replies":""}},
+      {"kind":"more","data":{"count":5,"children":["x1","x2"]}}
+    ]}}}},
+    {"kind":"t1","data":{"author":"[deleted]","body":"[removed]","score":50,"created_utc":1759000210,"replies":""}},
+    {"kind":"t1","data":{"author":"carol","body":"I use PARA instead","score":800,"created_utc":1759000220,"replies":""}},
+    {"kind":"t1","data":{"author":"dave","body":"low score","score":2,"created_utc":1759000230,"replies":""}},
+    {"kind":"more","data":{"count":200,"children":["y1"]}}
+  ]}}
+]
