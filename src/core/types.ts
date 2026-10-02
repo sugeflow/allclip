@@ -1,7 +1,7 @@
 // 统一数据结构：所有平台适配器只负责产出 ClipDoc，渲染、去重、写入全部共用。
 // 设计说明见 docs/design.md 第 4 节。
 
-export type Platform = 'x' | 'xiaohongshu' | 'zhihu' | 'reddit' | 'web';
+export type Platform = 'x' | 'xiaohongshu' | 'zhihu' | 'reddit' | 'wechat' | 'web';
 
 export type ClipKind = 'post' | 'thread' | 'article' | 'answer' | 'note' | 'pin' | 'page';
 
@@ -90,6 +90,7 @@ export const PLATFORM_LABEL: Record<Platform, string> = {
   xiaohongshu: '小红书',
   zhihu: '知乎',
   reddit: 'Reddit',
+  wechat: '公众号',
   web: 'Web',
 };
 

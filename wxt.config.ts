@@ -27,6 +27,8 @@ export default defineConfig({
       'https://*.zhimg.com/*',
       'https://www.reddit.com/*',
       'https://*.redd.it/*',
+      'https://mp.weixin.qq.com/*',
+      'https://mmbiz.qpic.cn/*',
     ],
     optional_host_permissions: ['<all_urls>'],
     commands: {

@@ -133,6 +133,7 @@ export function Options() {
 ├─ 小红书/
 ├─ 知乎/
 ├─ Reddit/
+├─ 公众号/
 ├─ Web/
 └─ _assets/      图片和视频`}
         </pre>

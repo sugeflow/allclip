@@ -7,6 +7,7 @@ import { xAdapter } from './x';
 import { xhsAdapter } from './xhs';
 import { zhihuAdapter } from './zhihu';
 import { redditAdapter } from './reddit';
+import { wechatAdapter } from './wechat';
 
 export interface Adapter {
   platform: Platform;
@@ -15,7 +16,7 @@ export interface Adapter {
   extract(target?: ExtractTarget): Promise<ClipDoc | null>;
 }
 
-const ADAPTERS: Adapter[] = [xAdapter, xhsAdapter, zhihuAdapter, redditAdapter];
+const ADAPTERS: Adapter[] = [xAdapter, xhsAdapter, zhihuAdapter, redditAdapter, wechatAdapter];
 
 export async function extractCurrentPage(target?: ExtractTarget): Promise<ClipDoc> {
   const url = new URL(location.href);

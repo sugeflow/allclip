@@ -26,6 +26,7 @@ export function htmlToMarkdown(html: string | HTMLElement): string {
 export function tidy(md: string): string {
   return md
     .replace(/^(\s*)([-*+]|\d+\.)\s{2,}/gm, '$1$2 ')
+    .replace(/^[ \t\u00a0]+$/gm, '') // 只有空格的行（公众号等页面的 <p>&nbsp;</p>、列表项尾巴）
     .replace(/\n{3,}/g, '\n\n')
     .trim();
 }
