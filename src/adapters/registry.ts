@@ -4,6 +4,7 @@ import type { ClipDoc, Platform } from '../core/types';
 import { AdapterError } from './errors';
 import { webAdapter } from './web';
 import { xAdapter } from './x';
+import { xhsAdapter } from './xhs';
 
 export interface Adapter {
   platform: Platform;
@@ -12,7 +13,7 @@ export interface Adapter {
   extract(target?: ExtractTarget): Promise<ClipDoc | null>;
 }
 
-const ADAPTERS: Adapter[] = [xAdapter];
+const ADAPTERS: Adapter[] = [xAdapter, xhsAdapter];
 
 export async function extractCurrentPage(target?: ExtractTarget): Promise<ClipDoc> {
   const url = new URL(location.href);
