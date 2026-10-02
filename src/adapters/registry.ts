@@ -5,6 +5,7 @@ import { AdapterError } from './errors';
 import { webAdapter } from './web';
 import { xAdapter } from './x';
 import { xhsAdapter } from './xhs';
+import { zhihuAdapter } from './zhihu';
 
 export interface Adapter {
   platform: Platform;
@@ -13,7 +14,7 @@ export interface Adapter {
   extract(target?: ExtractTarget): Promise<ClipDoc | null>;
 }
 
-const ADAPTERS: Adapter[] = [xAdapter, xhsAdapter];
+const ADAPTERS: Adapter[] = [xAdapter, xhsAdapter, zhihuAdapter];
 
 export async function extractCurrentPage(target?: ExtractTarget): Promise<ClipDoc> {
   const url = new URL(location.href);
