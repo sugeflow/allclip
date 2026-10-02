@@ -1,6 +1,8 @@
-# AllClip（kb-clipper）
+# AllClip
 
-Chrome 插件：把网上看到的内容抓成干净的 Markdown，连同图片一起存进 Obsidian 的 `AllClip/` 文件夹。
+把推特、小红书、知乎、Reddit、微信公众号和任意网页，连同图片一起收进你的 Obsidian。
+
+Chrome 插件：把网上看到的内容抓成干净的 Markdown，连同图片一起存进 Obsidian 的 `AllClip/` 文件夹。没有服务器、不收集数据，见 [隐私说明](PRIVACY.md)。
 
 - 设计文档：[docs/design.md](docs/design.md)
 - 开源方案调研：[docs/research.md](docs/research.md)
@@ -15,8 +17,9 @@ Chrome 插件：把网上看到的内容抓成干净的 Markdown，连同图片�
 | M3 | 知乎：回答、专栏文章、想法；公式、脚注、原图、链接卡片、代码；问题页存屏幕中间那条 | ✅ |
 | M4 | Reddit：文字/图片/图集/视频/外链/转发帖，得分最高的评论（默认 10 条，带回复） | ✅ |
 | M5 | 页内“收录”按钮（推特、小红书）、右键识别鼠标所在内容、只存选中文字（摘录笔记）、文件名模板 / status / 默认标签、注入脚本瘦身 | ✅ |
+| M6 | 微信公众号：正文、懒加载图片（data-src）、公众号名、发布时间、代码块；图片存本地 | ✅ |
 
-推特、小红书、知乎、Reddit 走专门的适配器，其它网页走通用模式（Defuddle 提取正文）。
+推特、小红书、知乎、Reddit、微信公众号走专门的适配器，其它网页走通用模式（Defuddle 提取正文）。
 
 **注意**：插件装好或更新后，已经打开的推特、小红书、知乎、Reddit 标签页要刷新一次，才能拿到完整数据（长推文、线程、视频）。没刷新也能存，但只能读页面上的文字，弹窗里会提示。
 
@@ -77,6 +80,12 @@ pnpm build && ./dev/harness.sh   # 生成界面预览页 .output/preview（模�
 
 `dev/` 下的 `*-probe.ts` 是开发时注入真实页面验证适配器用的，不会打包进插件。
 
+## X 书签批量导入
+
+AllClip 不做批量导入，用现成的 [XClipper](https://github.com/zendegani/XClipper)（Chrome 商店可装，个人非商业使用免费）：
+在 x.com 书签页打开 XClipper → 批量导出 → 来源选 Bookmarks、格式选 Markdown、勾选保存图片 → 导出后把文件夹放进 Obsidian 仓库（比如 `AllClip/X 书签/`）。
+具体选项以 XClipper 的说明为准。以后的新书签用 AllClip 的收录按钮存。
+
 ## 已知限制
 
 - **Reddit 没有用真实数据验证过**：开发环境里 Reddit 拦截了脚本请求，样本是按官方 JSON 格式手写的。插件在你的浏览器里用你自己的会话请求，正常情况下能拿到；拿不到时会退回读页面。
@@ -85,3 +94,13 @@ pnpm build && ./dev/harness.sh   # 生成界面预览页 .output/preview（模�
 - obsidian:// 方式存不了本地图片，小红书的图片链接过段时间会失效。
 
 代码结构见设计文档第 10 节。`sources/` 下是参考用的第三方源码，不参与构建，不提交。
+
+## 致谢
+
+用到的开源库（均为 MIT）：[Defuddle](https://github.com/kepano/defuddle)（正文提取）、[Turndown](https://github.com/mixmark-io/turndown) 和 [turndown-plugin-gfm](https://github.com/mixmark-io/turndown-plugin-gfm)（HTML 转 Markdown）、[Preact](https://preactjs.com)、[WXT](https://wxt.dev)。
+
+参考了这些项目的思路（没有复制代码，只借鉴做法）：[Obsidian Web Clipper](https://github.com/obsidianmd/obsidian-clipper)、[ZJ-clipper](https://github.com/AidenXu-1/ZJ-clipper)、[XClipper](https://github.com/zendegani/XClipper)、[download-zhihu](https://github.com/wallechfox/download-zhihu)（知乎转换规则，MIT）、[wechat-article-to-markdown](https://github.com/jackwener/wechat-article-to-markdown)（公众号处理规则，MIT）、[xiaohongshu-content-collector](https://github.com/anupamme/xiaohongshu-content-collector)。
+
+## 许可证
+
+[MIT](LICENSE)
