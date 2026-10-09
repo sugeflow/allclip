@@ -108,7 +108,7 @@ function Header() {
   return (
     <header class="head">
       <div class="brand">
-        <span class="brand-seal" aria-hidden="true">收</span>
+        <img class="brand-seal" src="/icon/128.png" alt="" />
         <span class="brand-name">AllClip</span>
       </div>
       <button class="btn ghost icon" title="设置" aria-label="设置" onClick={() => chrome.runtime.openOptionsPage()}>

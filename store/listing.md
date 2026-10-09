@@ -7,10 +7,16 @@
 | 位置 | 文件 | 规格 |
 |---|---|---|
 | 商店图标 | `public/icon/128.png` | 128×128 |
-| 截图 | `store/screenshot-1.png` | 1280×800 |
+| 截图 1（首图） | `store/screenshot-1-hero.png` | 1280×800 |
+| 截图 2（推特） | `store/screenshot-2-x.png` | 1280×800 |
+| 截图 3（小红书） | `store/screenshot-3-xhs.png` | 1280×800 |
+| 截图 4（Reddit） | `store/screenshot-4-reddit.png` | 1280×800 |
 | 小型宣传图块 | `store/promo-small-440x280.png` | 440×280 |
+| 顶部宣传图块（可选） | `store/promo-marquee-1400x560.png` | 1400×560 |
 
-截图和宣传图的源文件是 `store/shot-1.html`、`store/promo-small.html`，改完用无头 Chrome 重新截图。
+Logo 来自 `store/gen/logo-b.png`（GPT Image 生成），备选方案 `logo-a.png`、`logo-c.png`。首图插画是 `store/hero-bg.png`。
+
+截图和宣传图的源文件是 `store/shot-*.html`、`store/hero.html`（`#s` 首图 / `#m` 大宣传图 / `#t` 小宣传图），改完用无头 Chrome 重新截图。
 
 ## 商品详情
 

@@ -58,7 +58,7 @@ export function Options() {
     <main class="page">
       <header class="top">
         <div class="brand">
-          <span class="brand-seal" aria-hidden="true">收</span>
+          <img class="brand-seal" src="/icon/128.png" alt="" />
           <div>
             <h1>AllClip</h1>
             <p>把看到的内容收进 Obsidian</p>

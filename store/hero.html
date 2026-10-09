@@ -1,0 +1,28 @@
+<!doctype html><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0}
+html,body{overflow:hidden}
+body{background:#f0eae1 url(hero-bg.png) no-repeat right bottom;color:#1f1d1a;font-family:-apple-system,'PingFang SC',sans-serif;position:relative}
+.brand{display:flex;align-items:center;gap:var(--g)}
+.brand img{width:var(--logo);height:var(--logo)}
+.brand b{font:700 var(--name)/1 -apple-system,sans-serif;letter-spacing:.01em}
+h1{font:600 var(--h)/1.3 'Songti SC',serif;margin-top:var(--gap)}
+h1 em{font-style:normal;color:#b8432f}
+p{margin-top:calc(var(--gap)*.5);font-size:var(--p);color:#5a554c;line-height:1.6}
+/* 1280×800 首张截图 */
+body.s{width:1280px;height:800px;background-size:auto 660px;padding:110px 0 0 80px;--logo:72px;--name:40px;--g:18px;--h:54px;--gap:56px;--p:21px}
+/* 1400×560 大型宣传图 */
+body.m{width:1400px;height:560px;background-size:auto 560px;padding:92px 0 0 80px;--logo:64px;--name:36px;--g:16px;--h:46px;--gap:40px;--p:19px}
+/* 440×280 小型宣传图 */
+body.t{width:440px;height:280px;background-size:auto 250px;background-position:right -40px bottom;padding:30px 0 0 28px;--logo:48px;--name:28px;--g:12px;--h:22px;--gap:22px;--p:12px}
+body.t::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#f0eae1 52%,transparent 75%);z-index:-1}
+body.t{z-index:0}
+</style>
+<body>
+<div class="brand"><img src="icon-128.png"><b>AllClip</b></div>
+<h1 id="h"></h1>
+<p id="p"></p>
+<script>
+const k=location.hash.slice(1)||'s';document.body.className=k;
+h.innerHTML=k==='t'?'看到好内容，<br><em>一键</em>收进 Obsidian':'看到好内容，<br><em>一键</em>收进 Obsidian';
+p.innerHTML=k==='t'?'推特 · 小红书 · 知乎<br>Reddit · 公众号 · 任意网页':k==='m'?'推特 · 小红书 · 知乎 · Reddit · 微信公众号 · 任意网页<br>图片存本地 · 不经过任何服务器 · 开源免费':'推特 · 小红书 · 知乎 · Reddit<br>微信公众号 · 任意网页<br><br>图片存本地，不经过任何服务器，开源免费';
+</script>
