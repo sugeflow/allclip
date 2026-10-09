@@ -8,8 +8,9 @@ export default defineConfig({
   }),
   manifest: {
     name: 'AllClip',
-    description: '把网上看到的内容抓进 Obsidian：推特、小红书、知乎、Reddit 和任意网页。',
-    permissions: ['storage', 'activeTab', 'scripting', 'contextMenus', 'offscreen', 'notifications'],
+    homepage_url: 'https://github.com/sugeflow/allclip',
+    description: '把网上看到的内容抓进 Obsidian：推特、小红书、知乎、Reddit、微信公众号和任意网页，图片一起存本地。',
+    permissions: ['storage', 'activeTab', 'scripting', 'contextMenus', 'offscreen'],
     host_permissions: [
       'http://127.0.0.1/*',
       'https://127.0.0.1/*',
@@ -30,7 +31,6 @@ export default defineConfig({
       'https://mp.weixin.qq.com/*',
       'https://mmbiz.qpic.cn/*',
     ],
-    optional_host_permissions: ['<all_urls>'],
     commands: {
       'quick-save': {
         suggested_key: { default: 'Alt+S', mac: 'Alt+S' },
